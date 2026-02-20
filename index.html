@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro | Örnek Siteo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --bg-color: #0f0f13;
+            --surface-color: #1c1c24;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0b0;
+            --accent-color: #e63946; /* Benim seçtiğim bir renk, çok itiraz etme */
+            --accent-hover: #ff4d5a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 5rem 0;
+            border-bottom: 2px solid var(--surface-color);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        header h1 span {
+            color: var(--accent-color);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--surface-color);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Tags */
+        .tags {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: rgba(230, 57, 70, 0.1);
+            color: var(--accent-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Merhaba, ben <span>Pro</span>.</h1>
+            <p>Bilgisayar Mühendisliği Öğrencisi, Yazılım Geliştirici ve Sıkı Bir Oyuncu.</p>
+        </header>
+
+        <section id="about">
+            <h2>Hakkımda</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 800px;">
+                Merhaba! Ben Pro. Veri yapıları, algoritmalar ve diferansiyel denklemlerle boğuşmadığım zamanlarda genellikle kod yazarım. Bir yandan müzik zevkimi (In Extremo ve türevleri) beslerken, diğer yandan Havit ekipmanlarımla PC oyunlarının derinliklerine dalmayı severim. Estetik ve işlevselliği birleştirmeyi öğreniyorum.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Geliştirdiklerim</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Bilimsel Hesap Makinesi</h3>
+                    <p>Karmaşık matematiksel işlemleri kolaylaştırmak için Python ve Flet kütüphanesi kullanarak geliştirdiğim, modern arayüze sahip bir masaüstü uygulaması.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flet</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Mobil Uygulama Projesi</h3>
+                    <p>Çapraz platform destekli, modern ve akıcı bir kullanıcı deneyimi sunmak üzere tasarlanan yeni mobil uygulamam.</p>
+                    <div class="tags">
+                        <span class="tag">Dart</span>
+                        <span class="tag">Flutter</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Oyun Modding & Araştırmaları</h3>
+                    <p>Özellikle Hytale gibi esnek oyun motorlarında mod geliştirme ve oyun mekaniklerini kişiselleştirme üzerine yaptığım çalışmalar.</p>
+                    <div class="tags">
+                        <span class="tag">Game Dev</span>
+                        <span class="tag">Modding</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>İlgi Alanları & Setup</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Müzik & Atmosfer</h3>
+                    <p>Kod yazarken veya oyun oynarken sağlam bir playlist şart. Metal ve rock favorim. (Judas Priest ve Accept vazgeçilmezim.)</p>
+                </div>
+                <div class="card">
+                    <h3>Oyun Dünyası</h3>
+                    <p>Boş zamanlarımda Baldur's Gate 3 evreninde kaybolmak, Bad End Theater'da farklı sonlar aramak veya Nintendo Switch OLED'imde vakit geçirmek en büyük hobim.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Pro. Tüm hakları saklıdır. (Tasarım için bana teşekkür etmeyi unutma.)</p>
+        </footer>
+    </div>
+
+</body>
+</html>
